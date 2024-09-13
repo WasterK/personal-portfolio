@@ -1,0 +1,75 @@
+body {
+    background-color: #232323;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the left */
+    height: 100vh;
+    margin: 0;
+}
+
+#home {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center; /* Center vertically */
+}
+
+#greeting {
+    font-size: 3rem;
+    color: #FFFFFF;
+    white-space: nowrap;
+    overflow: hidden; /* Ensures text overflows hidden */
+}
+
+
+.typing-text {
+    display: inline-block; /* Ensures proper typing effect on multiple lines */
+    white-space: nowrap; /* Keeps the text on one line before line break */
+    overflow: hidden; /* Ensures text overflows hidden */
+    border-right: 0.15em solid #FFFFFF; /* Cursor effect */
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+#name {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+#profession {
+    font-size: 2.5rem;
+    color: #007FFF;
+}
+
+#know-more {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    background-color: #007FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FFFFFF; }
+}
