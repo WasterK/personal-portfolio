@@ -53,7 +53,7 @@ export class AboutComponent implements AfterViewInit {
                     knowMoreElement.classList.add('fade-in');
                   }
                 }, 15000); // Adjust as needed
-              }, 10); // Adjust as needed for name fade-out duration
+              }, 500); // Adjust as needed for name fade-out duration
             }
           }, 2000); // Adjust as needed for "I am" display duration
         }
