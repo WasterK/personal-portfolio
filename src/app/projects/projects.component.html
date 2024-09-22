@@ -1,1 +1,6 @@
-<p>projects works!</p>
+<div class="project-list-container">
+    <div class="project-card" *ngFor="let project of loadProjects()">
+        <h3>{{ project.name }}</h3>
+        <button class="btn-try-it" (click)="openProjectInNewTab($event, project.link)">Try It</button>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+/* Project List Container */
+.project-list-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Project Card */
+.project-card {
+    background: linear-gradient(185deg, #1835a8, #f06595); /* Vibrant gradient */
+    color: white; /* White text for contrast */
+    border-radius: 15px; /* Smooth, rounded corners */
+    padding: 30px;
+    margin-bottom: 65px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Relative for button positioning */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Project Name */
+.project-card h3 {
+    margin: 0;
+    padding-bottom: 3rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white; /* Consistent white text */
+}
+
+/* Try It Button */
+.btn-try-it {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent button */
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px; /* Full rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-try-it:hover {
+    background-color: white; /* Invert colors on hover */
+    color: #f06595; /* Match with gradient color */
+    border: 2px solid #f06595;
+}
+
+/* Button on Right Corner */
+.btn-try-it.right {
+    right: 20px;
+    left: auto;
+}
+
+/* Responsive Styling for Cards */
+@media (max-width: 768px) {
+    .project-card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .btn-try-it {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for project card */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to project cards */
+.project-card {
+    animation: fadeIn 0.5s ease forwards; /* Apply animation */
+    opacity: 0; /* Start invisible */
+}
+
+/* Add a delay for each card based on its index */
+.project-card:nth-child(1) { animation-delay: 0s; }
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.2s; }
+.project-card:nth-child(4) { animation-delay: 0.3s; }
+/* Add more delays for additional cards if needed */

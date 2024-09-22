@@ -1,1 +1,18 @@
-<app-about></app-about>
+<nav class="navbar">
+    <ul class="nav-links">
+      <li><a (click)="onClickProjects('/home')">Home</a></li>
+      <li><a (click)="onClickProjects('/about')">About</a></li>
+      <li><a (click)="onClickProjects('/projects')">Projects</a></li>
+      <li><a (click)="onClickProjects('/contact')">Contact</a></li>
+      <!-- Add more navbar buttons if needed -->
+    </ul>
+    <div class="hamburger" (click)="toggleMenu()">
+      <!-- Hamburger icon for mobile view -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+  
+  <router-outlet></router-outlet>
+  
