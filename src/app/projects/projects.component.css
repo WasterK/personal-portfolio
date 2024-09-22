@@ -8,7 +8,7 @@
 
 /* Project Card */
 .project-card {
-    background: linear-gradient(185deg, #1835a8, #f06595); /* Vibrant gradient */
+    background: linear-gradient(185deg, #1835a8, #b465f0); /* Vibrant gradient */
     color: white; /* White text for contrast */
     border-radius: 15px; /* Smooth, rounded corners */
     padding: 30px;
@@ -25,15 +25,15 @@
 }
 
 .project-card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
 }
 
 /* Project Name */
 .project-card h3 {
     margin: 0;
     padding-bottom: 3rem;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -48,8 +48,8 @@
     background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent button */
     color: white;
     border: 2px solid white;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 8px 15px;
+    font-size: 0.8rem;
     border-radius: 25px; /* Full rounded button */
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -66,6 +66,41 @@
     right: 20px;
     left: auto;
 }
+
+/* Apply animation to project cards */
+.project-card {
+    animation: fadeIn 0.5s ease forwards; /* Apply animation */
+    opacity: 0; /* Start invisible */
+}
+
+/* Add a delay for each card based on its index */
+.project-card:nth-child(1) { animation-delay: 0s; }
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.2s; }
+.project-card:nth-child(4) { animation-delay: 0.3s; }
+/* Add more delays for additional cards if needed */
+
+/* GitHub Button */
+.btn-github {
+    position: absolute;
+    bottom: 20px; /* Adjust to your preference */
+    right: 20px; /* Adjust to your preference */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent button */
+    border: none;
+    border-radius: 50%; /* Round button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-github img {
+    width: 24px; /* Size of the GitHub icon */
+    height: 24px; /* Size of the GitHub icon */
+}
+
+.btn-github:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Darker on hover */
+}
+
 
 /* Responsive Styling for Cards */
 @media (max-width: 768px) {
@@ -96,15 +131,3 @@
     }
 }
 
-/* Apply animation to project cards */
-.project-card {
-    animation: fadeIn 0.5s ease forwards; /* Apply animation */
-    opacity: 0; /* Start invisible */
-}
-
-/* Add a delay for each card based on its index */
-.project-card:nth-child(1) { animation-delay: 0s; }
-.project-card:nth-child(2) { animation-delay: 0.1s; }
-.project-card:nth-child(3) { animation-delay: 0.2s; }
-.project-card:nth-child(4) { animation-delay: 0.3s; }
-/* Add more delays for additional cards if needed */

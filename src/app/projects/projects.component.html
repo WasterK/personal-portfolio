@@ -1,6 +1,13 @@
 <div class="project-list-container">
-    <div class="project-card" *ngFor="let project of loadProjects()">
+    <div class="project-card" *ngFor="let project of loadProjects()" (click)="onProjectClick(project.link)">
         <h3>{{ project.name }}</h3>
-        <button class="btn-try-it" (click)="openProjectInNewTab($event, project.link)">Try It</button>
+        <div class="button-container">
+            <ng-container *ngIf="project.link">
+                <button class="btn-try-it" (click)="openProjectInNewTab($event, project.link)">Try It</button>
+            </ng-container>
+            <a href="{{ project.githubLink }}" target="_blank" class="btn-github">
+                <img src="assets/github-mark-white.png" alt="GitHub" />
+            </a>
+        </div>
     </div>
 </div>

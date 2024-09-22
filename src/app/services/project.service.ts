@@ -9,8 +9,8 @@ export class ProjectService {
   constructor() {
     // Sample projects (optional)
     this.projects = [ 
-      {'name': 'GenAI Cold Email Generator', "link": 'https://genai-cold-email-generator.onrender.com'},
-      {'name': 'IoT Device Manager', "link": ''}
+      {'name': 'GenAI Cold Email Generator', "link": 'https://genai-cold-email-generator.onrender.com', 'githubLink': 'https://github.com/WasterK/GenAI-cold-email-generator'},
+      {'name': 'IoT Device Manager', "link": '', 'githubLink': 'https://github.com/WasterK/tc-workshop-digihome'}
     ];
   }
 
