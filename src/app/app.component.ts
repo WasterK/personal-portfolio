@@ -28,5 +28,6 @@ export class AppComponent {
 
   onClickProjects(path:string) {
     this.router.navigate([path])
+    this.toggleMenu()
   }
 }
