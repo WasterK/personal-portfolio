@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Global font */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 60px 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    text-align: center; /* Center align text */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px; /* Max width for the grid */
+    margin: auto; /* Center the grid */
+}
+
+/* Project Item */
+.project-item {
+    position: relative; /* Set relative positioning for child elements */
+    background-color: #fff; /* White background for project items */
+    border: 1px solid #e0e0e0; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    display: flex; /* Flexbox to align elements vertically */
+    flex-direction: column; /* Arrange content in a column */
+    justify-content: space-between; /* Distribute space evenly */
+    min-height: 250px; /* Minimum height to ensure consistent sizing without stretching */
+}
+
+/* Hover effect */
+.project-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Project Name */
+.project-item h3 {
+    font-size: 1.5rem; /* Heading size for project name */
+    margin: 10px 0; /* Space around project name */
+    color: #007bff; /* Link color */
+}
+
+/* Project Description */
+.project-item p {
+    color: #666; /* Gray color for project description */
+    font-size: 1rem; /* Description font size */
+    margin: 10px 0; /* Space around description */
+}
+
+/* Button Group Container */
+.button-group {
+    display: flex; /* Flexbox to align buttons side by side */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    margin-top: 15px; /* Space above the button group */
+}
+
+/* "Try it" Button */
+.project-item a.try-it {
+    display: inline-block; /* Makes the link behave like a button */
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+    font-size: 1rem; /* Slightly smaller font size for better fit */
+    padding: 8px 16px; /* Reduced padding to make the button smaller */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center text inside the button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow to give it depth */
+}
+
+/* Hover effect for Try it button */
+.project-item a.try-it:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-4px); /* Slight lifting effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Focus effect for accessibility */
+.project-item a.try-it:focus {
+    outline: 2px solid #ffbf47; /* Golden outline when focused for better accessibility */
+    outline-offset: 2px;
+}
+
+/* Active state for Try it button */
+.project-item a.try-it:active {
+    background-color: #003d80; /* Darker blue when button is pressed */
+    transform: translateY(1px); /* Slight sinking effect on active */
+}
+
+/* GitHub Button */
+.project-item a.btn-github {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border: none;
+    border-radius: 50%; /* Round button */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 12px; /* Added padding for a consistent button size */
+}
+
+.project-item a.btn-github img {
+    width: 36px; /* Size of the GitHub icon */
+    height: 36px; /* Size of the GitHub icon */
+}
+
+/* Hover effect for GitHub button */
+.project-item a.btn-github:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Darker on hover */
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 768px) {
+    .project-item a.try-it {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 8px 16px; /* Maintain smaller padding on mobile */
+    }
+    .project-item a.btn-github {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
+
+/* Additional styling for the buttons if needed */
+.button-group {
+    margin-top: 10px; /* Space above button group */
+}
+
+/* Button when disabled (optional, if needed for functionality) */
+.project-item a.try-it:disabled {
+    background-color: #cccccc; /* Gray background for disabled button */
+    cursor: not-allowed; /* No clickability */
+    box-shadow: none; /* Remove shadow */
+    pointer-events: none; /* Disable interaction */
+}

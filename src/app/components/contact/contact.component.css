@@ -1,0 +1,76 @@
+/* Contact Me Section Styling */
+.contact-me-section {
+  text-align: center;
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+
+.contact-me-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Social Links Container */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Social Icon Styling */
+.social-icon {
+  display: inline-block;
+  background-color: #0077b5; /* Default background (LinkedIn blue) */
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+/* LinkedIn Icon Color */
+.social-icon.linkedin {
+  background-color: #0077b5;
+}
+
+/* GitHub Icon Color */
+.social-icon.github {
+  background-color: #333;
+}
+
+/* Instagram Icon Color */
+.social-icon.instagram {
+  background-color: #e4405f; /* Instagram color */
+}
+
+/* WhatsApp Icon Color */
+.social-icon.whatsapp {
+  background-color: #25d366; /* WhatsApp color */
+}
+
+/* Email Icon Color */
+.social-icon.email {
+  background-color: #007bff; /* Blue color for email */
+}
+
+/* Hover Effect */
+.social-icon:hover {
+  background-color: #005c8a; /* Darker color on hover */
+  transform: scale(1.1); /* Scale effect */
+}
+
+/* Instagram hover color */
+.social-icon.instagram:hover {
+  background-color: #d13853;
+}
+
+/* WhatsApp hover color */
+.social-icon.whatsapp:hover {
+  background-color: #128c7e;
+}
+
+/* Email hover color */
+.social-icon.email:hover {
+  background-color: #0056b3;
+}

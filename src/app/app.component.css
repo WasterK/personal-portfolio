@@ -1,0 +1,20 @@
+/* Hide scrollbar for the entire application */
+html, body {
+    overflow: hidden !important; /* Forces the scrollbars to be hidden */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hide scrollbars in all elements (for Firefox, IE, Edge, etc.) */
+  * {
+    -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+  
+  /* Optional: Ensure no scrollbar appears when elements overflow */
+  body {
+    overflow-x: hidden;  /* Hide horizontal scrollbar */
+    overflow-y: hidden;  /* Hide vertical scrollbar */
+  }
+  

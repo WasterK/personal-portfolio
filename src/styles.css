@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+/* Hide scrollbar but allow scrolling */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: -moz-scrollbars-none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  overflow: scroll; /* Allow scrolling */
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
